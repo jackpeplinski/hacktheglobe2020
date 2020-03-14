@@ -1,0 +1,4 @@
+#Sat Mar 14 12:31:18 EDT 2020
+base.0=/Users/jackpeplinski/hacktheglobe2020/hacktheglobe2020/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
