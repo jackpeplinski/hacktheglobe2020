@@ -4,7 +4,11 @@ import 'home.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
+  final var risk;
+  ResultsPage({Key key, @required this.text}) : super(key: key);
+
   Widget build(BuildContext context) {
+    final  Map<String, Object>rcvdData = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text("Patient Results"),
@@ -14,7 +18,7 @@ class ResultsPage extends StatelessWidget {
         children: <Widget>[
           Center(
             child: Text(
-              "97%",
+              "${rcvdData['risk']}",
               style: Theme.of(context).textTheme.display4,
             ),
           ),
