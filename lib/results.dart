@@ -5,7 +5,7 @@ import 'home.dart';
 class ResultsPage extends StatelessWidget {
 
   final risk;
-  ResultsPage(this.risk)
+  ResultsPage(this.risk);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ResultsPage extends StatelessWidget {
         children: <Widget>[
           Center(
             child: Text(
-              "${rcvdData['risk']}",
+              risk,
               style: Theme.of(context).textTheme.display4,
             ),
           ),
@@ -35,7 +35,7 @@ class ResultsPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ResultsPage()),
+                  MaterialPageRoute(builder: (context) => ResultsPage(risk)),
                 );
               },
               color: Colors.grey,
