@@ -56,22 +56,22 @@ class _HomePageState extends State<HomePage> {
                 inputField("Last name"),
                 inputField(
                     "BMI",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                         BMI = int.parse(text);
                     }),
                 inputField(
                     "Salary",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       salary = int.parse(text);
                     }),
                 inputField(
                     "Years of schooling",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       edu_status = int.parse(text);
                     }),
                 inputField(
                     "Relationship status [never married, married, divorced]",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       switch(text) {
                         case "never married":
                           {
@@ -97,23 +97,23 @@ class _HomePageState extends State<HomePage> {
                     }),
                 inputField(
                     "No. of children",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       children = int.parse(text);
                     }),
                 inputField("No. of work hours",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       work_wk = int.parse(text);
                     }),
                 inputField("Pain tolerance (scale 1-10)",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       pain_tol = int.parse(text);
                     }),
                 inputField("Cigarette per week",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       smoke = int.parse(text);
                     }),
                 inputField("Weekly alcohol consumption (days per week)",
-                    onSubmitted: (text) {
+                    onChanged: (text) {
                       alc = int.parse(text);
                     })
               ],
@@ -136,7 +136,7 @@ class _ToResultsButtonState extends State<ToResultsButton> {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        var exp = -1.888012e1 + 1.0076e0 * BMI + 1.202803e-07 * salary +
+        var exp = -1.888012e1 + 1.0076e0 * BMI + 1.202803e-7 * salary +
             5.383947e-1 * edu_status + 8.152859e-2 * never_married +
             3.626329e-1 * married + -7.240816e-1 * divorced + 1.250288e-1 * children +
             7.388244e-2 * work_wk + 6.643426e-2 * pain_tol + -7.861881e-1 * smoke +
