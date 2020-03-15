@@ -51,70 +51,140 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Text("Enter details below to view patient success rate",
                     style: Theme.of(context).textTheme.body1),
+
                 inputField("First name"),
                 inputField("Last name"),
-                inputField(
-                    "BMI",
-                    onChanged: (text) {
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                        hintText: "BMI"),
+                        onChanged: (text) {
                         BMI = int.parse(text);
-                    }),
-                inputField(
-                    "Salary",
-                    onChanged: (text) {
-                      salary = int.parse(text);
-                    }),
-                inputField(
-                    "Years of schooling",
-                    onChanged: (text) {
-                      edu_status = int.parse(text);
-                    }),
-                inputField(
-                    "Relationship status [never married, married, divorced]",
-                    onChanged: (text) {
-                      switch(text) {
-                        case "never married":
-                          {
-                            never_married = 1;
-                            married = 0;
-                            divorced = 0;
+                        })
+                ),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Salary"),
+                        onChanged: (text) {
+                          salary = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Years of schooling"),
+                        onChanged: (text) {
+                          edu_status = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Relationship status [never married, married, divorced]"),
+                        onChanged: (text) {
+                          switch(text) {
+                            case "never married":
+                              {
+                                never_married = 1;
+                                married = 0;
+                                divorced = 0;
+                              }
+                              break;
+                            case "married":
+                              {
+                                never_married = 0;
+                                married = 1;
+                                divorced = 0;
+                              }
+                              break;
+                            case "divorced":
+                              {
+                                never_married = 0;
+                                married = 0;
+                                divorced = 1;
+                              }
                           }
-                          break;
-                        case "married":
-                          {
-                            never_married = 0;
-                            married = 1;
-                            divorced = 0;
-                          }
-                          break;
-                        case "divorced":
-                          {
-                            never_married = 0;
-                            married = 0;
-                            divorced = 1;
-                          }
-                      }
-                    }),
-                inputField(
-                    "No. of children",
-                    onChanged: (text) {
-                      children = int.parse(text);
-                    }),
-                inputField("No. of work hours",
-                    onChanged: (text) {
-                      work_wk = int.parse(text);
-                    }),
-                inputField("Pain tolerance (scale 1-10)",
-                    onChanged: (text) {
-                      pain_tol = int.parse(text);
-                    }),
-                inputField("Cigarette per week",
-                    onChanged: (text) {
-                      smoke = int.parse(text);
-                    }),
-                inputField("Weekly alcohol consumption (days per week)",
-                    onChanged: (text) {
-                      alc = int.parse(text);
-                    })
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "No. of children"),
+                        onChanged: (text) {
+                          children = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "No. of work hours"),
+                        onChanged: (text) {
+                          work_wk = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Pain tolerance (scale 1-10)"),
+                        onChanged: (text) {
+                          pain_tol = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Cigarettes per week"),
+                        onChanged: (text) {
+                          smoke = int.parse(text);
+                        })),
+
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent, width: 5)),
+                            border: OutlineInputBorder(),
+                            hintText: "Weekly alcohol consumption (days per week)"),
+                        onChanged: (text) {
+                          alc = int.parse(text);
+                        }))
+
               ],
             ),
           ),
