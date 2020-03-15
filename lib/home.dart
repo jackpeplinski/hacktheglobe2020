@@ -213,8 +213,7 @@ class _ToResultsButtonState extends State<ToResultsButton> {
         var risk = pow(e, exp);
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ResultsPage(context, "second", arguments: {"risk" :
-          risk.toString()})),
+          MaterialPageRoute(builder: (context) => ResultsPage(risk.toString())),
         );
       },
       color: Colors.grey,

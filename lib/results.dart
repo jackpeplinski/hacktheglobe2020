@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 class ResultsPage extends StatelessWidget {
+
+  final risk;
+  ResultsPage(this.risk)
+
   @override
   Widget build(BuildContext context) {
-    final  Map<String, Object>rcvdData = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text("Patient Results"),
