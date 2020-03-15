@@ -211,9 +211,11 @@ class _ToResultsButtonState extends State<ToResultsButton> {
             7.388244e-2 * work_wk + 6.643426e-2 * pain_tol + -7.861881e-1 * smoke +
             -2.615533e-3 * alc;
         var risk = pow(e, exp);
+        String riskS = (risk*100).toStringAsFixed(2);
+        String output = "$riskS %";
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ResultsPage(risk.toString())),
+          MaterialPageRoute(builder: (context) => ResultsPage(output)),
         );
       },
       color: Colors.grey,
