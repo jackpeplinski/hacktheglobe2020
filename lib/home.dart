@@ -2,25 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:hacktheglobe2020/results.dart';
 import 'dart:math';
 
+var BMI = 0;
+var salary = 0;
+var edu_status = 0;
+var never_married = 0;
+var married = 0;
+var divorced = 0;
+var children = 0;
+var work_wk = 0;
+var pain_tol = 0;
+var smoke = 0;
+var alc = 0;
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
-  var BMI = 0;
-  var salary = 0;
-  var edu_status = 0;
-  var never_married = 0;
-  var married = 0;
-  var divorced = 0;
-  var children = 0;
-  var work_wk = 0;
-  var pain_tol = 0;
-  var smoke = 0;
-  var alc = 0;
-
   Widget inputField(String hintText) {
     return Padding(
       padding: EdgeInsets.only(top: 10, bottom: 10, right: 150, left: 150),

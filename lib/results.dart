@@ -4,9 +4,6 @@ import 'home.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
-  final var risk;
-  ResultsPage({Key key, @required this.text}) : super(key: key);
-
   Widget build(BuildContext context) {
     final  Map<String, Object>rcvdData = ModalRoute.of(context).settings.arguments;
     return Scaffold(
